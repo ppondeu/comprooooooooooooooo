@@ -1,8 +1,20 @@
 #include <stdio.h>
 
 int main() {
-    int score_in_class, midterm_exam, final_exam;
+    int score_in_class;
+    int midterm_exam;
+    int final_exam;
     int number_of_student;
+    int lowest_A;
+    int lowest_B;
+    int lowest_C;
+    int lowest_D;
+    int maximum_score;
+    int i;
+    int student_score_in_class;
+    int student_midterm;
+    int student_final;
+    int total_score;
     printf("Computer Programming%100s\n\n", "25/02/2022");
     printf("-------------------\n");
     printf("Setup score\n");
@@ -14,10 +26,10 @@ int main() {
     scanf("%d", &final_exam);
     printf("-------------------\n");
     printf("Setup grade\n");
-    int maximum_score = score_in_class + midterm_exam + final_exam;
+    maximum_score = score_in_class + midterm_exam + final_exam;
     printf("Maximum score : %d\n", maximum_score);
 
-    int lowest_A, lowest_B, lowest_C, lowest_D;
+    //int lowest_A, lowest_B, lowest_C, lowest_D;
     while(1){
         printf("Lowest A : ");
         scanf("%d", &lowest_A);
@@ -54,9 +66,9 @@ int main() {
     printf("Number of student : ");
     scanf("%d", &number_of_student);
     printf("----------------\n");
-    for(int i = 1; i <= number_of_student ; i++){
+    for(i = 1; i <= number_of_student ; i++){
         printf("Student %d\n\n", i);
-        int student_score_in_class, student_midterm, student_final;
+        //int student_score_in_class, student_midterm, student_final;
 
         while(1){
             printf("Input score : ");
@@ -84,7 +96,7 @@ int main() {
         }
 
         printf("\n");
-        int total_score = student_score_in_class + student_midterm + student_final;
+        total_score = student_score_in_class + student_midterm + student_final;
         if(total_score >= lowest_A)
             printf("Grade : A");
         else if(total_score >= lowest_B)
@@ -99,7 +111,6 @@ int main() {
 
     }
     printf("END");
-
 
     return 0;
 }
