@@ -29,7 +29,6 @@ int main() {
     maximum_score = score_in_class + midterm_exam + final_exam;
     printf("Maximum score : %d\n", maximum_score);
 
-    //int lowest_A, lowest_B, lowest_C, lowest_D;
     while(1){
         printf("Lowest A : ");
         scanf("%d", &lowest_A);
@@ -68,7 +67,6 @@ int main() {
     printf("----------------\n");
     for(i = 1; i <= number_of_student ; i++){
         printf("Student %d\n\n", i);
-        //int student_score_in_class, student_midterm, student_final;
 
         while(1){
             printf("Input score : ");
