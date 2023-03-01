@@ -1,0 +1,104 @@
+#include <stdio.h>
+
+int main() {
+    printf("Computer Programming%100s\n\n", "25/02/2022");
+    printf("-------------------\n");
+    printf("Setup score\n");
+    int score_in_class, midterm_exam, final_exam;
+    printf("Score in class : ");
+    scanf("%d", &score_in_class);
+    printf("Midterm exam : ");
+    scanf("%d", &midterm_exam);
+    printf("Final exam : ");
+    scanf("%d", &final_exam);
+    printf("-------------------\n");
+    printf("Setup grade\n");
+    int maximum_score = score_in_class + midterm_exam + final_exam;
+    printf("Maximum score : %d\n", maximum_score);
+
+    int lowest_A, lowest_B, lowest_C, lowest_D;
+    while(1){
+        printf("Lowest for A : ");
+        scanf("%d", &lowest_A);
+        if(lowest_A > 0 && lowest_A < maximum_score)
+            break;
+        else
+            printf("Error! try again.\n");
+    }
+    while(1){
+        printf("Lowest for B : ");
+        scanf("%d", &lowest_B);
+        if(lowest_B > 0 && lowest_B < maximum_score)
+            break;
+        else
+            printf("Error! try again.\n");
+    }
+    while(1){
+        printf("Lowest for C : ");
+        scanf("%d", &lowest_C);
+        if(lowest_C > 0 && lowest_C < maximum_score)
+            break;
+        else
+            printf("Error! try again.\n");
+    }
+    while(1){
+        printf("Lowest for D : ");
+        scanf("%d", &lowest_D);
+        if(lowest_D > 0 && lowest_D < maximum_score)
+            break;
+        else
+            printf("Error! try again.\n");
+    }
+    printf("-------------------\n");
+    printf("Number of student : ");
+    int number_of_student;
+    scanf("%d", &number_of_student);
+    printf("----------------\n");
+    for(int i = 1; i <= number_of_student ; i++){
+        printf("Student %d\n\n", i);
+        int student_score_in_class, student_midterm, student_final;
+
+        while(1){
+            printf("Input score : ");
+            scanf("%d", &student_score_in_class);
+            if(student_score_in_class >= 0 && student_score_in_class <= score_in_class)
+                break;
+            else
+                printf("Error! try again.\n");
+        }
+        while(1){
+            printf("Input midterm : ");
+            scanf("%d", &student_midterm);
+            if(student_midterm >= 0 && student_midterm <= midterm_exam)
+                break;
+            else
+                printf("Error! try again.\n");
+        }
+        while(1){
+            printf("Input final : ");
+            scanf("%d", &student_final);
+            if(student_final >= 0 && student_final <= final_exam)
+                break;
+            else
+                printf("Error! try again.\n");
+        }
+        
+        printf("\n");
+        int total_score = score_in_class + student_midterm + student_final;
+        if(total_score >= lowest_A)
+            printf("Grade : A");
+        else if(total_score >= lowest_B)
+            printf("Grade : B");
+        else if(total_score >= lowest_C)
+            printf("Grade : C");
+        else if(total_score >= lowest_D)
+            printf("Grade : D");
+        else
+            printf("Grade : F");
+        printf("\n-------------------\n");
+
+    }
+    printf("END");
+    
+    return 0;
+}
