@@ -1,10 +1,11 @@
 #include <stdio.h>
 
 int main() {
+    int score_in_class, midterm_exam, final_exam;
+    int number_of_student;
     printf("Computer Programming%100s\n\n", "25/02/2022");
     printf("-------------------\n");
     printf("Setup score\n");
-    int score_in_class, midterm_exam, final_exam;
     printf("Score in class : ");
     scanf("%d", &score_in_class);
     printf("Midterm exam : ");
@@ -18,7 +19,7 @@ int main() {
 
     int lowest_A, lowest_B, lowest_C, lowest_D;
     while(1){
-        printf("Lowest for A : ");
+        printf("Lowest A : ");
         scanf("%d", &lowest_A);
         if(lowest_A > 0 && lowest_A < maximum_score)
             break;
@@ -26,7 +27,7 @@ int main() {
             printf("Error! try again.\n");
     }
     while(1){
-        printf("Lowest for B : ");
+        printf("Lowest B : ");
         scanf("%d", &lowest_B);
         if(lowest_B > 0 && lowest_B < maximum_score)
             break;
@@ -34,7 +35,7 @@ int main() {
             printf("Error! try again.\n");
     }
     while(1){
-        printf("Lowest for C : ");
+        printf("Lowest C : ");
         scanf("%d", &lowest_C);
         if(lowest_C > 0 && lowest_C < maximum_score)
             break;
@@ -42,7 +43,7 @@ int main() {
             printf("Error! try again.\n");
     }
     while(1){
-        printf("Lowest for D : ");
+        printf("Lowest D : ");
         scanf("%d", &lowest_D);
         if(lowest_D > 0 && lowest_D < maximum_score)
             break;
@@ -51,7 +52,6 @@ int main() {
     }
     printf("-------------------\n");
     printf("Number of student : ");
-    int number_of_student;
     scanf("%d", &number_of_student);
     printf("----------------\n");
     for(int i = 1; i <= number_of_student ; i++){
@@ -82,9 +82,9 @@ int main() {
             else
                 printf("Error! try again.\n");
         }
-        
+
         printf("\n");
-        int total_score = score_in_class + student_midterm + student_final;
+        int total_score = student_score_in_class + student_midterm + student_final;
         if(total_score >= lowest_A)
             printf("Grade : A");
         else if(total_score >= lowest_B)
@@ -99,6 +99,7 @@ int main() {
 
     }
     printf("END");
-    
+
+
     return 0;
 }
